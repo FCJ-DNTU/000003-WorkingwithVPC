@@ -10,62 +10,68 @@ pre : " <b> 4.2 </b> "
 
 
 {{% notice note %}}
-Có nhiều cách kết nối EC2, các bạn có thể tham khảo [kết nối EC2 bằng **PuTTY**](https://000004.awsstudygroup.com/vi/4-launchlinuxinstance/4.2-connectlinuxinstance/). Trong bài lab, chúng ta sử dụng [MobaXterm](https://mobaxterm.mobatek.net/) để kết nối EC2
+Có nhiều cách kết nối EC2, các bạn có thể tham khảo [kết nối EC2 bằng **PuTTY**](https://000004.awsstudygroup.com/vi/4-launchlinuxinstance/4.2-connectlinuxinstance/). Trong bài lab, chúng ta sử dụng [Visual Studio Code](https://code.visualstudio.com/download) để kết nối EC2
 {{% /notice %}}
 
-1. Thực hiện tải [MobaXterm](https://mobaxterm.mobatek.net/download.html) 
+1. Thực hiện tải [Visual Studio Code](https://code.visualstudio.com/download) 
 
-![Create VPC](/images/4-CreateEc2Server/4.2-ec2connect/00019-ec2connect.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img1.png?featherlight=false&width=60pc)
 
 2. Truy cập vào trang **EC2**
 
    - Chọn **Instances**
    - Chọn **EC2 Public**
-   - Chọn **Details**
-   - Xem **Public IPv4 address**
+   - Chọn **Connect**
 
 
-![Create VPC](/images/7/0001.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img2.png?featherlight=false&width=60pc)
 
-3. Sau khi tải **MobaXterm**, tiến hành giải nén và mở 
+3. Trong phần **Connect**
 
-   - Chọn **Session**
+   - Chọn **SSH Client**
+   - Sao chép đoạn mã ở phần **Example**
 
-![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img3.png?featherlight=false&width=60pc)
 
-4. Trong giao diện **Session settings**
+4. Trong giao diện **Visual Studio Code**
 
-   - Chọn **SSH**
+   - Tải **SSH**
 
-![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img4.png?featherlight=false&width=60pc)
 
-5. Trong giao diện **Session settings**
+5. Trên thanh công cụ tìm kiếm của **Visual Studio Code**
 
-   - **Remote host**, nhập **```Public IPv4 address```**
-   - **Specify username**, nhập **```ec2-user```**
-   - **Use private key**, chọn đường dẫn của **aws-keypair.pem** đã tạo và tải về máy lúc tạo EC2.
+   - Làm theo các hướng dẫn để có thể kết nối **SSH**
 
-![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img5.png?featherlight=false&width=60pc)
 
-6. Kết nối thành công.
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img6.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/7/0003.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img7.png?featherlight=false&width=60pc)
 
-7. Kiểm tra kết nối tới internet của EC2 Public, ta thực hiện lệnh:
+6. Cấu hình **SSH**.
+   - Dán đường dẫn đã sao chép ở trên **EC2 Public** vào đây
+   - Sửa đường dẫn **key pair** sao cho dẫn đúng tới file nơi đã lưu trữ
+   - Lưu file
+  
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img8.png?featherlight=false&width=60pc)
 
-```
-ping amazon.com -c5
-```
+7. Kết nối **SSH**.
+   - Chạy lại các lệnh ở thanh tìm kiếm giống trên
+   - Tìm kiếm và chọn vào **IP public EC2** để kết nối
+  
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img9.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/7/0004.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img10.png?featherlight=false&width=60pc)
 
-8. Thực hiện ping đến **EC2 private**
 
-```
-ping <IP Private EC2 Private>
-```
+8. Kiểm tra kết nối tới internet của EC2 Public, ta thực hiện lệnh:
 
-![Create VPC](/images/7/0005.png?featherlight=false&width=90pc)
+   ```
+   ping amazon.com -c5
+   ```
+
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img11.png?featherlight=false&width=60pc)
 
 
 
@@ -80,14 +86,14 @@ ping <IP Private EC2 Private>
    - Chọn **Private IPv4 addresses**
    - Sau đó kết nối SSH vào **EC2 Public**
 
-![Create VPC](/images/7/0003.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img21.png?featherlight=false&width=60pc)
 
 10. Thực hiện lệnh ping **<địa chỉ IP private của EC2 Private>** để kiểm tra kết nối từ máy chủ **EC2 Public** sang máy chủ **EC2 Private**. Chúng ta kiểm tra kết nối giữa 2 EC2 instance bằng câu lệnh:
 
 ```
-ping 10.10.4.105 -c5
+ping <IP Private EC2 Private> -c5
 ```
-![Create VPC](/images/7/0005.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img22.png?featherlight=false&width=60pc)
 
 11.  **EC2 Private** sẽ không có **public IP address** vì chúng ta không gán cho máy chủ này public IP. Để có thể ssh vào **EC2 Private**, chúng ta sẽ thực hiện kết nối ssh từ EC2 Public thông qua địa chỉ **private IP address của EC2 Private**
 
@@ -106,18 +112,18 @@ Bạn tải [an SCP client, i.e. command-line secure file copy](https://the.eart
 
      - Chọn **Load**
 
-![Create VPC](/images/4-CreateEc2Server/4.2-ec2connect/0009-ec2connect.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img12.png?featherlight=false&width=60pc)
 
 13.  Chọn **aws-keypair.pem**
 
      - Chọn **OK**
      - Chọn **Save private key** với tên **aws-keypair.ppk**
 
-![Create VPC](/images/4-CreateEc2Server/4.2-ec2connect/00010-ec2connect.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img13.png?featherlight=false&width=60pc)
 
 14.  Hoàn thành generation key
 
-![Create VPC](/images/4-CreateEc2Server/4.2-ec2connect/00011-ec2connect.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img14.png?featherlight=false&width=60pc)
 
 15. Khởi chạy **Command Prompt**. Chuyển đường dẫn tới thư mục bạn vừa download **pscp**. Chạy lệnh dưới đây để upload file **aws-keypair.pem** lên thư mục **/home/ec2-user/** của máy chủ EC2 Public.
 
@@ -127,7 +133,7 @@ Bạn tải [an SCP client, i.e. command-line secure file copy](https://the.eart
 pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@<EC2 PUBLIC public IP address>:/home/ec2-user/
 ```
 
-![Create VPC](/images/4-CreateEc2Server/4.2-ec2connect/00012-ec2connect.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img15.png?featherlight=false&width=60pc)
 
 16.  Truy cập vào **EC2**
 
@@ -136,7 +142,7 @@ pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@<EC2 PUBLIC public IP address>:
      - Chọn **Details**
      - Xem **Public IPv4 address**
 
-![Create VPC](/images/7/0006.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img16.png?featherlight=false&width=60pc)
 
 17.   Quay trở lại giao diện kết nối EC2. Để đảm bảo bạn copy file **aws-keypair.pem** lên máy chủ **EC2 Public** ta thực hiện lệnh
 
@@ -144,14 +150,14 @@ pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@<EC2 PUBLIC public IP address>:
 ls
 ```
 
-![Create VPC](/images/7/0007.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img17.png?featherlight=false&width=60pc)
 
 18.  Cập nhật quyền cho file **aws-keypair.pem** bằng cách chạy lệnh **chmod 400 aws-keypair.pem**. AWS yêu cầu file key pair cần được hạn chế quyền truy cập trước khi được sử dụng để kết nối tới máy chủ EC2.
 
 ```
 chmod 400 aws-keypair.pem
 ```
-![Create VPC](/images/7/0008.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img18.png?featherlight=false&width=60pc)
 
 19.  **SSH** tới máy chủ **EC2 Private**
 
@@ -159,7 +165,7 @@ chmod 400 aws-keypair.pem
 ssh -i aws-keypair.pem ec2-user@<EC2 Private server's private IP address>
 ```
 
-![Create VPC](/images/7/0009.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img19.png?featherlight=false&width=60pc)
 
 20.  Thực hiện **ping test tới amazon.com**. Bạn có thể thấy, chúng ta không thể kết nối **internet từ EC2 Private**. Trong bước tiếp theo chúng ta sẽ tạo **NAT Gateway** để cho phép máy chủ **EC2 Private** kết nối internet theo chiều từ nội bộ đi ra. Giữ nguyên kết nối tới **EC2 Private** để chúng ta có thể kiểm tra kết nối tới **internet** sau khi hoàn tất tạo và cấu hình **NAT Gateway** nhé.
 
@@ -167,7 +173,7 @@ ssh -i aws-keypair.pem ec2-user@<EC2 Private server's private IP address>
 ping amazon.com
 ```
 
-![Create VPC](/images/7/00010.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img20.png?featherlight=false&width=60pc)
 
 
 

@@ -27,58 +27,60 @@ On June 13, 2023, AWS launched the **EC2 Instance Connect Endpoint (EIC Endpoint
 1. Create Security Group for **EIC Endpoint**
 
    - In the search box, enter: **security groups**, in the features section select **Security groups**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0002.png?featherlight=false&width=90pc)
-
    - Select **Create security group**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0003.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-1.png?featherlight=false&width=60pc)  
 
   - In the **Security group name** section, enter ``EIC Endpoint``
   - In the **Description** section, enter ``Allow SSH for MyIP``
   - In the VPC section, select **ASG VPC**
-  - Select **Add rule**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0004.png?featherlight=false&width=90pc)
 
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-2.png?featherlight=false&width=60pc)  
+
+  - Select **Add rule**
   - In the **Type** section, select protocol **SSH**
   - In the **Source** section, select **My IP** with the meaning: only allow your IP address with SSH protocol to pass through this Security group
   - The remaining values ​​remain the same.
-  - Select **Create security group**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0005.png?featherlight=false&width=90pc)
 
-2. Create **EC2 Instance Connect Endpoint**
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-3.png?featherlight=false&width=60pc)  
+
+  - Select **Create security group**
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-4.png?featherlight=false&width=60pc)  
+
+1. Create **EC2 Instance Connect Endpoint**
 
    - In the search box, enter: ``endpoint services`` , in the Features section select **endpoint services**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0006.png?featherlight=false&width=90pc)
-
    - Select **Create endpoint**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0007.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-5.png?featherlight=false&width=60pc)  
 
    - In the **Name tag** section, enter: ``EC2 private endpoint``
    - In the **Service category** section, select: **EC2 Instance Connect Endpoint**
    - In **VPC** section, select **ASG-VPC**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0008.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-6.png?featherlight=false&width=60pc)  
 
    - In the **Security groups** section, select: **EIC Endpoint** created in step 1
    - In the **Subnet** section, select: **subnet-0da7e5096deb895e1 (Private subnet 2)** is the subnet of EC2 Private
    - Select **Create endpoint**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/0009.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-7.png?featherlight=false&width=60pc)  
 
    - Wait for Status to change to **Available** and go to the next step
-![Create VPC](/images/4-CreateEc2Server/4.5-eic/00010.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-8.png?featherlight=false&width=60pc)  
 
-3. Access EC2 Private via **EC2 Instance Connect Endpoint**
+1. Access EC2 Private via **EC2 Instance Connect Endpoint**
 
 - At the EC2 interface, check the **box** of EC2 Private
 - In the **Public IPv4 address** section, check and see: there is no Public IP value - meaning we cannot access this EC2 via Public IP
 - Select **Connect**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/00011.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-9.png?featherlight=false&width=60pc)  
 
 - In the **Connection Type** section, select **Connect using EC2 Instance Connect Endpoint**
 - In the **EC2 Instance Connect Endpoint** section, select the EIC just created in step 2
 - Select **Connect**
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/00012.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-10.png?featherlight=false&width=60pc)  
+
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-11.png?featherlight=false&width=60pc)  
 
 - Congratulations, you have successfully accessed EC2 Private via **EC2 Instance Connect Endpoint** only from your IP address
- ![Create VPC](/images/4-CreateEc2Server/4.5-eic/00013.png?featherlight=false&width=90pc)
+ ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-12.png?featherlight=false&width=60pc)  
 
 Note:
 - Normally, you will do the lab using a user with AdministratorAccess permission . In the opposite case, you need to refer to the documentation to grant the User permission to operate the above steps. [IAM permissions to use EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/permissions-for-ec2-instance-connect-endpoint.html)
