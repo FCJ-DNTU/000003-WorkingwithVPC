@@ -12,21 +12,21 @@
     <title>Test Connection :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1727615139" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1727615139" rel="stylesheet">
-    <link href="/css/hybrid.css?1727615139" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1727615139" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1727615139" rel="stylesheet">
-    <link href="/css/auto-complete.css?1727615139" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1727615139" rel="stylesheet">
-    <link href="/css/theme.css?1727615139" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1727615139" rel="stylesheet">
+    <link href="/css/nucleus.css?1727794126" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727794126" rel="stylesheet">
+    <link href="/css/hybrid.css?1727794126" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727794126" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727794126" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727794126" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727794126" rel="stylesheet">
+    <link href="/css/theme.css?1727794126" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727794126" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1727615139" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727794126" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1727615139"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727794126"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1727615139"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1727615139"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727794126"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727794126"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1727615139"></script>
+<script type="text/javascript" src="/js/search.js?1727794126"></script>
 
     
   </div>
@@ -1252,7 +1252,7 @@
 <li>Select <strong>SSH Client</strong></li>
 <li>Copy the code in the <strong>Example</strong> section</li>
 </ul>
-<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img3.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-3.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 </li>
 <li>
 <p>In the <strong>Visual Studio Code</strong> interface</p>
@@ -1277,7 +1277,7 @@
 <li>Edit the <strong>key pair</strong> path to point to the correct file location</li>
 <li>Save the file</li>
 </ul>
-<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img8.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-6.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 </li>
 <li>
 <p>Connect via <strong>SSH</strong>.</p>
@@ -1285,13 +1285,13 @@
 <li>Re-run the commands in the search bar as shown above</li>
 <li>Search for and select the <strong>IP public EC2</strong> to connect</li>
 </ul>
-<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img9.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
-<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img10.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-7.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-8.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 </li>
 <li>
 <p>Test the internet connection of EC2 Public by running the command:</p>
 <pre tabindex="0"><code>ping amazon.com -c5
-</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img11.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-9.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 </li>
 </ol>
 <h2 id="connect-to-the-ec2-private-server-and-check-internet-connection">Connect to the EC2 Private Server and Check Internet Connection</h2>
@@ -1305,14 +1305,14 @@
 <li>Select <strong>Private IPv4 addresses</strong></li>
 <li>Then connect SSH to <strong>EC2 Public</strong></li>
 </ul>
+<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-10.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Perform a ping test to the EC2 Private&rsquo;s private IP address to test the connection from the EC2 Public server to the EC2 Private server. Use the following command:</p>
 </li>
 </ol>
-<p><img src="/images/7/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="10">
-<li>Perform a ping test to the EC2 Private&rsquo;s private IP address to test the connection from the EC2 Public server to the EC2 Private server. Use the following command:</li>
-</ol>
 <pre tabindex="0"><code>ping 10.10.4.105 -c5
-</code></pre><p><img src="/images/7/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-11.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 <ol start="11">
 <li>
 <p><strong>EC2 Private</strong> will not have a <strong>public IP address</strong> because we are not assigning this server a public IP. To be able to ssh into <strong>EC2 Private</strong>, we will make an ssh connection from EC2 Public through EC2 Private <strong>private IP address</strong></p>
@@ -1361,7 +1361,7 @@
 </li>
 </ol>
 <pre tabindex="0"><code>pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@&lt;EC2 PUBLIC public IP address&gt;:/home/ec2-user/
-</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img15.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-15.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 <ol start="16">
 <li>
 <p>Access to <strong>EC2</strong></p>
@@ -1373,27 +1373,27 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img16.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+<p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-16.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 <ol start="17">
 <li>Return to the EC2 connection interface. Make sure you copy the <strong>aws-keypair.pem</strong> file to the <strong>EC2 Public</strong> server, we execute the command</li>
 </ol>
 <pre tabindex="0"><code>ls
-</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img17.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-17.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 <ol start="18">
 <li>Update the permissions for the <strong>aws-keypair.pem</strong> file by running the <strong>chmod 400 aws-keypair.pem</strong> command. AWS requires the key pair file to be restricted before it can be used to connect to the EC2 server.</li>
 </ol>
 <pre tabindex="0"><code>chmod 400 aws-keypair.pem
-</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img18.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-18.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 <ol start="19">
 <li><strong>SSH</strong> to <strong>EC2 Private</strong> server</li>
 </ol>
 <pre tabindex="0"><code>ssh -i aws-keypair.pem ec2-user@&lt;EC2 Private server&#39;s private IP address&gt;
-</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img19.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-19.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 <ol start="20">
 <li>Perform <strong>ping test to amazon.com</strong>. As you can see, we cannot connect <strong>internet from EC2 Private</strong>. In the next step, we will create <strong>NAT Gateway</strong> to allow the <strong>EC2 Private</strong> server to connect to the internet in the outbound direction. Keep the connection to <strong>EC2 Private</strong> so that we can check the connection to <strong>internet</strong> after finishing creating and configuring <strong>NAT Gateway</strong>.</li>
 </ol>
 <pre tabindex="0"><code>ping amazon.com
-</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img20.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/4-CreateEc2Server-update/2-Test-Connection/Connect-20.png?featherlight=false&amp;width=60pc" alt="Create VPC"></p>
 
 
 
@@ -1988,19 +1988,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1727615140"></script>
-    <script src="/js/perfect-scrollbar.min.js?1727615140"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1727615140"></script>
-    <script src="/js/jquery.sticky.js?1727615140"></script>
-    <script src="/js/featherlight.min.js?1727615140"></script>
-    <script src="/js/highlight.pack.js?1727615140"></script>
+    <script src="/js/clipboard.min.js?1727794126"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727794126"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727794126"></script>
+    <script src="/js/jquery.sticky.js?1727794126"></script>
+    <script src="/js/featherlight.min.js?1727794126"></script>
+    <script src="/js/highlight.pack.js?1727794126"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1727615140"></script>
-    <script src="/js/learn.js?1727615140"></script>
-    <script src="/js/hugo-learn.js?1727615140"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727794126"></script>
+    <script src="/js/learn.js?1727794126"></script>
+    <script src="/js/hugo-learn.js?1727794126"></script>
 
-    <link href="/mermaid/mermaid.css?1727615140" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1727615140"></script>
+    <link href="/mermaid/mermaid.css?1727794126" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727794126"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

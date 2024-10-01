@@ -106,5 +106,5 @@ pre : " <b> 4.1 </b> "
          - Chọn **Details**
          - Lưu trữ **Private IPv4 addresses**
 
-   ![Create VPC](/images/4-CreateEc2Server-update/1-Create-EC2-Server/EC2-img15.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/1-Create-EC2-Server/EC2-15.png?featherlight=false&width=60pc)
 

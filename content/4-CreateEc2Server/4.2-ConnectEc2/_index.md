@@ -8,7 +8,10 @@ pre : " <b> 4.2 </b> "
 
 ## Checking Connection
 
-> ℹ️ **Note:** There are several ways to connect to EC2 instances. You can follow the instructions to [connect to EC2 using PuTTY](https://000004.awsstudygroup.com/en/4-launchlinuxinstance/4.2-connectlinuxinstance/). In this lab, we will use [Visual Studio Code](https://code.visualstudio.com/download) to establish the connection.
+{{% notice note %}}
+ There are several ways to connect to EC2 instances. You can follow the instructions to [connect to EC2 using PuTTY](https://000004.awsstudygroup.com/en/4-launchlinuxinstance/4.2-connectlinuxinstance/). In this lab, we will use [Visual Studio Code](https://code.visualstudio.com/download) to establish the connection.
+ {{% /notice %}}
+
 
 1. **Download Visual Studio Code**
    - [Visual Studio Code](https://code.visualstudio.com/download)
@@ -29,7 +32,7 @@ pre : " <b> 4.2 </b> "
    - Select **SSH Client**
    - Copy the code in the **Example** section
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img3.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-3.png?featherlight=false&width=60pc)
 
 4. In the **Visual Studio Code** interface
 
@@ -52,15 +55,15 @@ pre : " <b> 4.2 </b> "
    - Edit the **key pair** path to point to the correct file location
    - Save the file
   
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img8.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-6.png?featherlight=false&width=60pc)
 
 7. Connect via **SSH**.
    - Re-run the commands in the search bar as shown above
    - Search for and select the **IP public EC2** to connect
   
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img9.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-7.png?featherlight=false&width=60pc)
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img10.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-8.png?featherlight=false&width=60pc)
 
 
 8. Test the internet connection of EC2 Public by running the command:
@@ -69,7 +72,7 @@ pre : " <b> 4.2 </b> "
    ping amazon.com -c5
    ```
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img11.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-9.png?featherlight=false&width=60pc)
 
 
 
@@ -83,15 +86,15 @@ pre : " <b> 4.2 </b> "
    - Select **Private IPv4 addresses**
    - Then connect SSH to **EC2 Public**
 
-![Create VPC](/images/7/0003.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-10.png?featherlight=false&width=60pc)
 
 10. Perform a ping test to the EC2 Private's private IP address to test the connection from the EC2 Public server to the EC2 Private server. Use the following command:
 
 
 ```
-ping 10.10.4.105 -c5
+ping <IP Private EC2 Private> -c5
 ```
-![Create VPC](/images/7/0005.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-11.png?featherlight=false&width=60pc)
 
 11. **EC2 Private** will not have a **public IP address** because we are not assigning this server a public IP. To be able to ssh into **EC2 Private**, we will make an ssh connection from EC2 Public through EC2 Private **private IP address**
 
@@ -130,7 +133,7 @@ You download [an SCP client, i.e. command-line secure file copy](https://the.ear
 pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@<EC2 PUBLIC public IP address>:/home/ec2-user/
 ```
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img15.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-15.png?featherlight=false&width=60pc)
 
 16. Access to **EC2**
 
@@ -139,7 +142,7 @@ pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@<EC2 PUBLIC public IP address>:
      - Select **Details**
      - View **Public IPv4 address**
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img16.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-16.png?featherlight=false&width=60pc)
 
 17. Return to the EC2 connection interface. Make sure you copy the **aws-keypair.pem** file to the **EC2 Public** server, we execute the command
 
@@ -147,14 +150,14 @@ pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@<EC2 PUBLIC public IP address>:
 ls
 ```
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img17.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-17.png?featherlight=false&width=60pc)
 
 18. Update the permissions for the **aws-keypair.pem** file by running the **chmod 400 aws-keypair.pem** command. AWS requires the key pair file to be restricted before it can be used to connect to the EC2 server.
 
 ```
 chmod 400 aws-keypair.pem
 ```
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img18.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-18.png?featherlight=false&width=60pc)
 
 19. **SSH** to **EC2 Private** server
 
@@ -162,7 +165,7 @@ chmod 400 aws-keypair.pem
 ssh -i aws-keypair.pem ec2-user@<EC2 Private server's private IP address>
 ```
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img19.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-19.png?featherlight=false&width=60pc)
 
 20. Perform **ping test to amazon.com**. As you can see, we cannot connect **internet from EC2 Private**. In the next step, we will create **NAT Gateway** to allow the **EC2 Private** server to connect to the internet in the outbound direction. Keep the connection to **EC2 Private** so that we can check the connection to **internet** after finishing creating and configuring **NAT Gateway**.
 
@@ -170,4 +173,4 @@ ssh -i aws-keypair.pem ec2-user@<EC2 Private server's private IP address>
 ping amazon.com
 ```
 
-   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-img20.png?featherlight=false&width=60pc)
+   ![Create VPC](/images/4-CreateEc2Server-update/2-Test-Connection/Connect-20.png?featherlight=false&width=60pc)

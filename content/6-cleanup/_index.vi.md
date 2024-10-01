@@ -11,17 +11,17 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 
 ### Terminate các EC2 Instance.
 1. Terminate EC2 instance.
-    - Truy cập Amazon EC2 console tại địa chỉ [EC2](https://console.aws.amazon.com/ec2/).
-    - Trên thanh điều hướng bên trái, chọn Intances
-    - Chọn tất cả EC2 Instance liên quan tới bài lab.
-    - Chọn **Instance state**
-    - Chọn **Terminate instance**
+- Truy cập Amazon EC2 console tại địa chỉ [EC2](https://console.aws.amazon.com/ec2/).
+- Trên thanh điều hướng bên trái, chọn Intances
+- Chọn tất cả EC2 Instance liên quan tới bài lab.
+- Chọn **Instance state**
+- Chọn **Terminate instance**
 
-![Create VPC](/images/16/0001.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-1.png?featherlight=false&width=60pc)
 
 2. Xác nhận terminate.
 
-![Create VPC](/images/16/0002.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-2.png?featherlight=false&width=60pc)
 
 #### Xóa NAT Gateway, Elastic IP Address 
 
@@ -32,14 +32,14 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 - Click Action.
 - Click Delete NAT Gateway.
 
-![Create VPC](/images/16/0003.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-3.png?featherlight=false&width=60pc)
 
 - Gõ delete.
 - Click Delete để xác nhận xóa NAT Gateway
 
-![Create VPC](/images/16/0004.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-4.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/0005.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-5.png?featherlight=false&width=60pc)
 
 #### Xóa xóa Elastic IP Address.
 - Tiếp tục xóa Elastic IP Address.
@@ -50,9 +50,9 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 - Click Release Elastic IP Address
 - Click Release.
 
-![Create VPC](/images/16/0006.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-6.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/0007.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-7.png?featherlight=false&width=60pc)
 
 #### Xóa EC2 Instance concect endpoint
 - Truy cập vào giao dịch Endpoint
@@ -63,35 +63,34 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 #### Tiếp tục làm tương tự và xóa theo thứ tự sau nhé:
 - VPN Site to Site connection.
 
-![Create VPC](/images/16/0008.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-8.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/0009.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-9.png?featherlight=false&width=60pc)
 
 - Virtual Private Gateway.
   
-![Create VPC](/images/16/00010.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-10.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/00011.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-11.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/00012.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-12.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/00013.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-13.png?featherlight=false&width=60pc)
 
 - Customer Gateway.
 
-![Create VPC](/images/16/00014.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-14.png?featherlight=false&width=60pc)
 
-
-![Create VPC](/images/16/00015.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-15.png?featherlight=false&width=60pc)
 
 - VPC ASG VPN
 
-![Create VPC](/images/16/00016.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-16.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/00017.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-17.png?featherlight=false&width=60pc)
 
 - VPC ASG.
 
-![Create VPC](/images/16/00018.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-18.png?featherlight=false&width=60pc)
 
-![Create VPC](/images/16/00019.png?featherlight=false&width=90pc)
+![Create VPC](/images/6-Clear-update/Clear-19.png?featherlight=false&width=60pc)

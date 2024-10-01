@@ -22,7 +22,7 @@ pre : " <b> 4.3 </b> "
 
 3. Successfully created a **Public IP Address**
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img3.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-3.png?featherlight=false&width=60pc)
 
 4. Access **VPC**:
    - Select **NAT Gateways**
@@ -36,15 +36,15 @@ pre : " <b> 4.3 </b> "
    - **Connectivity type**: Select **Public**
    - **Elastic IP allocation ID**: Select recently created **Elastic IP**
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img5.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-5.png?featherlight=false&width=60pc)
 
 6. Select **Create NAT gateway**
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img6.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-6.png?featherlight=false&width=60pc)
 
 7. Successfully created **NAT gateway**
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img7.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-7.png?featherlight=false&width=60pc)
 
 ## Create Route table - Private and assign to private subnets
 
@@ -101,4 +101,4 @@ pre : " <b> 4.3 </b> "
 ping amazon.com -c5
 ```
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img16.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-16.png?featherlight=false&width=60pc)

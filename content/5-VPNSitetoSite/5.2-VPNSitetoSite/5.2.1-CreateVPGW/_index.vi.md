@@ -13,7 +13,7 @@ pre : " <b> 5.2.1 </b> "
    - Chọn **Virtual Private Gateway**
    - Chọn **Create Virtual Private Gateway**
 
-![Create VPC](/images/11/0001.png?featherlight=false&width=90pc)
+![Create VPC](/images/5-SitetositeVPN-update/2-VPN-Connection/1-VPG/VPG-1.png?featherlight=false&width=60pc)
 
 2. Trong giao diện **Create Virtual Private Gateway**
 
@@ -21,14 +21,14 @@ pre : " <b> 5.2.1 </b> "
    - Chọn **Amazon default ASN**
    - Chọn **Create virtual private gateway**
 
-![Create VPC](/images/11/0002.png?featherlight=false&width=90pc)
+![Create VPC](/images/5-SitetositeVPN-update/2-VPN-Connection/1-VPG/VPG-2.png?featherlight=false&width=60pc)
 
 3. Chúng ta cần thực hiện **Attach to VPC**
 
    - Chọn **Actions**
    - Chọn **Attach to VPC**
 
-![Create VPC](/images/11/0003.png?featherlight=false&width=90pc)
+![Create VPC](/images/5-SitetositeVPN-update/2-VPN-Connection/1-VPG/VPG-3.png?featherlight=false&width=60pc)
 
 
 4. Trong giao diện **Attach to VPC**
@@ -36,8 +36,8 @@ pre : " <b> 5.2.1 </b> "
    - Chọn **VPC ASG.**
    - Chọn **Attach to VPC**
 
-![Create VPC](/images/11/0004.png?featherlight=false&width=90pc)
+![Create VPC](/images/5-SitetositeVPN-update/2-VPN-Connection/1-VPG/VPG-4.png?featherlight=false&width=60pc)
 
 5. Hoàn tất và xem **State** là **Attached**
 
-![Create VPC](/images/11/0005.png?featherlight=false&width=90pc)
+![Create VPC](/images/5-SitetositeVPN-update/2-VPN-Connection/1-VPG/VPG-5.png?featherlight=false&width=60pc)

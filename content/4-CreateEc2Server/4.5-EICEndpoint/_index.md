@@ -82,5 +82,6 @@ On June 13, 2023, AWS launched the **EC2 Instance Connect Endpoint (EIC Endpoint
 - Congratulations, you have successfully accessed EC2 Private via **EC2 Instance Connect Endpoint** only from your IP address
  ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-12.png?featherlight=false&width=60pc)  
 
-Note:
-- Normally, you will do the lab using a user with AdministratorAccess permission . In the opposite case, you need to refer to the documentation to grant the User permission to operate the above steps. [IAM permissions to use EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/permissions-for-ec2-instance-connect-endpoint.html)
+{{% notice note %}}
+Normally, you will do the lab using a user with AdministratorAccess permission . In the opposite case, you need to refer to the documentation to grant the User permission to operate the above steps. [IAM permissions to use EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/permissions-for-ec2-instance-connect-endpoint.html)
+{{% /notice %}}

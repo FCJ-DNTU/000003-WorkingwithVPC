@@ -87,5 +87,6 @@ Vào 13/06/2023, AWS ra mắt chức năng **EC2 Instance Connect Endpoint (EIC 
 - Chúc mừng bạn đã truy cập thành công EC2 Private thông qua **EC2 Instance Connect Endpoint** chỉ duy nhất từ địa chỉ IP của bạn
  ![Create VPC](/images/4-CreateEc2Server-update/5-Create-EC2-Instance-ConnectEndpoint/Test-12.png?featherlight=false&width=60pc)  
 
-Lưu ý:
-- Thông thường, bạn sẽ làm lab bằng user có quyền Admin, trong trường hợp ngược lại, bạn cần tham khảo thêm tài liệu để cấp quyền cho User được phép thao tác các bước như trên. [IAM permissions to use EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/permissions-for-ec2-instance-connect-endpoint.html)
+{{% notice note %}}
+Thông thường, bạn sẽ làm lab bằng user có quyền Admin, trong trường hợp ngược lại, bạn cần tham khảo thêm tài liệu để cấp quyền cho User được phép thao tác các bước như trên. [IAM permissions to use EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/permissions-for-ec2-instance-connect-endpoint.html)
+{{% /notice %}}

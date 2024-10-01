@@ -76,16 +76,16 @@ pre : " <b> 3.5 </b> "
 9. Chọn **Add rule** để thêm 1 rule mới.
 
    - Chọn **Type**: **All ICMP IPv4** và **Source**: **Anywhere**. Cho phép ping từ bất kì địa chỉ IP nào.
-   - 
+
 ![Create VPC](/images/3-Preparation-steps-update/5-Security-Group/SG-9.png?featherlight=false&width=60pc)
 
-10.  Chọn **Create security group**
+10.   Chọn **Create security group**
 
 
 ![Create VPC](/images/3-Preparation-steps-update/5-Security-Group/SG-10.png?featherlight=false&width=60pc)
 
 11.  Như vậy chúng ta đã tạo được **2 Security Group** cho các máy chủ nằm trong **public subnet và private subnet.**
 
-   - Tiếp theo chúng ta sẽ tiến hành tạo 2 máy chủ EC2.
+      - Tiếp theo chúng ta sẽ tiến hành tạo 2 máy chủ EC2.
 
 ![Create VPC](/images/3-Preparation-steps-update/5-Security-Group/SG-11.png?featherlight=false&width=60pc)

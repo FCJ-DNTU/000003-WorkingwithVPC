@@ -28,7 +28,7 @@ pre : " <b> 4.3 </b> "
 
 3. Chúng ta vừa tạo thành công một địa chỉ **Public IP Address**
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img3.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-3.png?featherlight=false&width=60pc)
 
 4. Truy cập vào **VPC**
 
@@ -44,16 +44,16 @@ pre : " <b> 4.3 </b> "
    - **Connectivity type**, chọn **Public**
    - **Elastic IP allocation ID**, chọn **Elastic IP** vừa tạo.
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img5.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-5.png?featherlight=false&width=60pc)
 
 6. Chọn **Create NAT gateway**
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img6.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-6.png?featherlight=false&width=60pc)
 
 7. Thành công tạo **NAT gateway**
 
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img7.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-7.png?featherlight=false&width=60pc)
 
 
 #### Tạo Route table - Private và gán vào các private subnet.
@@ -121,4 +121,4 @@ pre : " <b> 4.3 </b> "
 ping amazon.com -c5
 ```
 
-![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-img16.png?featherlight=false&width=60pc)
+![Create VPC](/images/4-CreateEc2Server-update/3-Create-NAT-Gateway/Nat-16.png?featherlight=false&width=60pc)
