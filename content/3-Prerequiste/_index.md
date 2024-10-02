@@ -10,7 +10,7 @@ pre : " <b> 3. </b> "
 
 In this exercise, we will be constructing a model based on the following diagram:
 
-![Create VPC](/images/3-Prerequiste/vpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/3-Prerequiste/vpc4.png?featherlight=false&width=100pc)
 
 ## Content
 
