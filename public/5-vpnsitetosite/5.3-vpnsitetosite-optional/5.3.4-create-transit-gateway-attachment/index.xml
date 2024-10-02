@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create Transit Gateway Attachment on Start with Amazon VPC and AWS VPN Site-to-Site.</title>
+    <link>//localhost:1313/5-vpnsitetosite/5.3-vpnsitetosite-optional/5.3.4-create-transit-gateway-attachment/</link>
+    <description>Recent content in Create Transit Gateway Attachment on Start with Amazon VPC and AWS VPN Site-to-Site.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/5-vpnsitetosite/5.3-vpnsitetosite-optional/5.3.4-create-transit-gateway-attachment/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
